@@ -10,13 +10,14 @@ var AppComponent = (function () {
     function AppComponent() {
         this.name = 'Angular First APP 2';
         this.age = 34;
+        this.colors = ['red', 'yellow', 'green', 'blue'];
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>Hello {{name}} Age {{age}}</h1> <br> <myComponent></myComponent>",
+        templateUrl: 'app/templates/appComponents.html',
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

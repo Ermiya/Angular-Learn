@@ -1,7 +1,13 @@
-import { Component } from '@angular/core';
+import { Component , Input} from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}} Age {{age}}</h1> <br> <myComponent></myComponent>`,
+  templateUrl: 'app/templates/appComponents.html',
 })
-export class AppComponent  { name = 'Angular First APP 2';age=34 }
+export class AppComponent  {
+
+   name = 'Angular First APP 2';
+   age=34;
+   colors:string[]=['red','yellow','green','blue'];
+  
+  }
