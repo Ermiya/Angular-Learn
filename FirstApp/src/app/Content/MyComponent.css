@@ -3,3 +3,16 @@ h1{
   border: 1px solid ;
   padding: 50px;
 }
+.class1{
+  border:3px solid blue;
+}
+
+.success{
+ padding: 20px;
+ color: green !important;
+}
+
+.danger{
+  padding: 20px;
+  color: red !important;
+}

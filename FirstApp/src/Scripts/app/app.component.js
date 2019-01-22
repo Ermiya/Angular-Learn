@@ -8,9 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'Angular First APP 2';
+        this.name = 'Angular';
         this.age = 34;
         this.colors = ['red', 'yellow', 'green', 'blue'];
+        this.number = 0;
+        this.myName = "farshid";
     }
     return AppComponent;
 }());

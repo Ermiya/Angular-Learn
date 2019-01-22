@@ -6,8 +6,11 @@ import { Component , Input} from '@angular/core';
 })
 export class AppComponent  {
 
-   name = 'Angular First APP 2';
+   name = 'Angular';
    age=34;
    colors:string[]=['red','yellow','green','blue'];
+
+   number: number = 0;
   
+   myName:string="farshid";
   }

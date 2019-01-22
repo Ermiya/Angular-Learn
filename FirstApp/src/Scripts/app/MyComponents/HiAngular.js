@@ -9,31 +9,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var MyComponent = (function () {
-    function MyComponent() {
-        this.names = ["ali", "farhad", "saeid"];
-        this.name = 'ermiya';
-        this.family = 'saeidi';
+var hiAngularComponent = (function () {
+    function hiAngularComponent() {
+        this.myStyle = 'yellow';
+        this.dynamicClass = 'danger';
+        this.isActive = false;
+        this.count = 1;
+        this.mySwitch = 2;
+        this.People = [
+            { name: 'ALi', family: 'Alavi', age: 20 },
+            { name: 'Reza', family: 'Alavi', age: 43 },
+            { name: 'hossein', family: 'hossein', age: 45 },
+            { name: 'Hasan', family: 'Alavi', age: 12 },
+            { name: 'Mohhamad', family: 'hossein', age: 34 }
+        ];
     }
-    ;
-    return MyComponent;
+    hiAngularComponent.prototype.active = function () {
+        this.isActive = !this.isActive;
+    };
+    return hiAngularComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], MyComponent.prototype, "message", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Array)
-], MyComponent.prototype, "mycolors", void 0);
-MyComponent = __decorate([
+hiAngularComponent = __decorate([
     core_1.Component({
-        selector: 'myComponent',
+        selector: 'hiAngular',
         // template :'<h1> This is my components</h1> ',
-        templateUrl: '/app/templates/MyComponent.html',
+        templateUrl: '/app/templates/HiAngular.html',
         styleUrls: ['app/Content/MyComponent.css']
     }),
     __metadata("design:paramtypes", [])
-], MyComponent);
-exports.MyComponent = MyComponent;
-//# sourceMappingURL=MyComponent.js.map
+], hiAngularComponent);
+exports.hiAngularComponent = hiAngularComponent;
+;
+//# sourceMappingURL=HiAngular.js.map

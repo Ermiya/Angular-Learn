@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'myComponent',
   // template :'<h1> This is my components</h1> ',
-  templateUrl: '/app/templates/MyTemplate.html',
+  templateUrl: '/app/templates/MyComponent.html',
   styleUrls: ['app/Content/MyComponent.css']
 
 })
