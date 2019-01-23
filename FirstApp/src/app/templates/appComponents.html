@@ -1,15 +1,39 @@
-<h1>Hello {{name}}</h1>
+<!-- <h1>Hello {{name}}</h1> -->
 
 <!-- <myComponent message="Hello Angular" [mycolors]="colors"></myComponent>
-<p>Defaul Counter : {{number}}</p>
+<p>Default Counter : {{number}}</p>
 <counter [(number)]="number"></counter>
 <br/>
 <input [(ngModel)]="myName" type="text"/>
 <p> Hello {{myName}}</p> -->
 
-<hiAngular>
+<!-- <hiAngular>
 <h1>Salam</h1>
 <p> Hi</p>
 
 <h3> farshid</h3>
-</hiAngular>
+</hiAngular> -->
+
+<h2>Register</h2>
+<hr/>
+<form (submit)="save(registerForm)" #registerForm="ngForm">
+  <div class="form-group" >
+    <label for="email">User Name</label>
+    <input type="email" class="form-control" id="email" placeholder="User Name" name="username" ngModel required #username>
+    <p> {{username.className}}</p>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Password" name="password" ngModel required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email2" placeholder="email" name="email" ngModel required>
+  </div>
+  <div class="form-group">
+    <label for="email">Address:</label>
+    <textarea type="email" class="form-control" id="Address" placeholder="Enter Address ..." rows="10" name="address" ngModel required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-success" value="Save" [disabled]="!registerForm.form.valid">Submit</button>
+</form>

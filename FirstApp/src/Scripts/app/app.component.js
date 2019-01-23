@@ -6,20 +6,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+var Register_1 = require("./models/Register");
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'Angular';
-        this.age = 34;
-        this.colors = ['red', 'yellow', 'green', 'blue'];
-        this.number = 0;
-        this.myName = "farshid";
     }
+    AppComponent.prototype.save = function (_register) {
+        this.register = new Register_1.Register(_register.value.username, _register.value.password, _register.value.email, _register.value.address);
+        //
+        console.log(this.register);
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
         templateUrl: 'app/templates/appComponents.html',
+        styles: [
+            "\n      .ng-valid[required],\n      ng-valid.required {\n        border: 1px solid green;\n      }\n      .ng-invalid:not(form)[class~='ng-touched'] {\n        border: 1px solid red;\n      }\n    ",
+        ],
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
