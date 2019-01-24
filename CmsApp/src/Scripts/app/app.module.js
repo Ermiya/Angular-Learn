@@ -7,11 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
-var MyComponent_1 = require("./MyComponents/MyComponent");
-var counter_1 = require("./MyComponents/counter");
-var HiAngular_1 = require("./MyComponents/HiAngular");
+var contactus_component_1 = require("./MyComponents/contactus.component");
+var home_component_1 = require("./MyComponents/home.component");
+var news_component_1 = require("./MyComponents/news.component");
+var aboutus_component_1 = require("./MyComponents/aboutus.component");
+var routes = [
+    { path: '', component: home_component_1.homeComponent },
+    { path: 'home', component: home_component_1.homeComponent },
+    { path: 'News', component: news_component_1.NewsComponent },
+    { path: 'ContactUs', component: contactus_component_1.ContactUsComponent },
+    { path: 'AboutUs', component: aboutus_component_1.AboutUsComponent }
+];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,9 +28,15 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, MyComponent_1.MyComponent, counter_1.CounterComponent, HiAngular_1.HiAngularComponent],
-        bootstrap: [app_component_1.AppComponent]
+        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forRoot(routes)],
+        declarations: [
+            app_component_1.AppComponent,
+            contactus_component_1.ContactUsComponent,
+            home_component_1.homeComponent,
+            news_component_1.NewsComponent,
+            aboutus_component_1.AboutUsComponent
+        ],
+        bootstrap: [app_component_1.AppComponent],
     })
 ], AppModule);
 exports.AppModule = AppModule;
