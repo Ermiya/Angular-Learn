@@ -5,34 +5,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var core_1 = require("@angular/core");
-var forms_1 = require("@angular/forms");
+var Register_1 = require("./models/Register");
 var AppComponent = (function () {
-    function AppComponent(builder) {
-        this.builder = builder;
-        this.username = new forms_1.FormControl('', [
-            forms_1.Validators.required,
-            forms_1.Validators.minLength(4)
-        ]);
-        this.password = new forms_1.FormControl('', [
-            forms_1.Validators.required
-        ]);
-        this.email = new forms_1.FormControl('', [
-            forms_1.Validators.required
-        ]);
-        this.address = new forms_1.FormControl('');
-        this.registerForm = this.builder.group({
-            username: this.username,
-            password: this.password,
-            email: this.email,
-            address: this.address
-        });
+    function AppComponent() {
     }
     AppComponent.prototype.save = function (_register) {
-        console.log(this.registerForm.value);
+        this.register = new Register_1.Register(_register.value.username, _register.value.password, _register.value.email, _register.value.address);
+        console.log(this.register);
     };
     return AppComponent;
 }());
@@ -40,8 +20,10 @@ AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
         templateUrl: 'app/templates/appComponents.html',
-    }),
-    __metadata("design:paramtypes", [forms_1.FormBuilder])
+        styles: [
+            "\n      .ng-valid[required],\n      ng-valid.required {\n        border: 1px solid green;\n      }\n      .ng-invalid:not(form)[class~='ng-touched'] {\n        border: 1px solid red;\n      }\n    ",
+        ],
+    })
 ], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
