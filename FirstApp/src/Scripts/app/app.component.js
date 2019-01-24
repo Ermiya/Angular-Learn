@@ -10,12 +10,26 @@ var Register_1 = require("./models/Register");
 var AppComponent = (function () {
     function AppComponent() {
     }
+<<<<<<< HEAD
+=======
+    AppComponent.prototype.save = function (_register) {
+        this.register = new Register_1.Register(_register.value.username, _register.value.password, _register.value.email, _register.value.address);
+        //
+        console.log(this.register);
+    };
+>>>>>>> parent of 5faf6a3... End 19 Reactive Form
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
         templateUrl: 'app/templates/appComponents.html',
+<<<<<<< HEAD
+=======
+        styles: [
+            "\n      .ng-valid[required],\n      ng-valid.required {\n        border: 1px solid green;\n      }\n      .ng-invalid:not(form)[class~='ng-touched'] {\n        border: 1px solid red;\n      }\n    ",
+        ],
+>>>>>>> parent of 5faf6a3... End 19 Reactive Form
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
