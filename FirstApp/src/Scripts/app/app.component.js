@@ -25,6 +25,12 @@ AppComponent = __decorate([
         selector: 'my-app',
         templateUrl: 'app/templates/appComponents.html',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        styles: [
+            "\n      .ng-valid[required],\n      ng-valid.required {\n        border: 1px solid green;\n      }\n      .ng-invalid:not(form)[class~='ng-touched'] {\n        border: 1px solid red;\n      }\n    ",
+        ],
+>>>>>>> parent of 5faf6a3... End 19 Reactive Form
 =======
         styles: [
             "\n      .ng-valid[required],\n      ng-valid.required {\n        border: 1px solid green;\n      }\n      .ng-invalid:not(form)[class~='ng-touched'] {\n        border: 1px solid red;\n      }\n    ",

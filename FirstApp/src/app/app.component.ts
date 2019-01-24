@@ -26,6 +26,7 @@ export class AppComponent {
   //  myName:string="farshid";
   register: Register;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     this.register = new Register(_register.value.username,_register.value.password,_register.value.email,_register.value.address);
@@ -69,6 +70,9 @@ export class AppComponent {
     console.log(this.registerForm.value);
 >>>>>>> parent of 169f7f6... .
   }
+=======
+  save(_register: any) {
+>>>>>>> parent of 5faf6a3... End 19 Reactive Form
 =======
   save(_register: any) {
 >>>>>>> parent of 5faf6a3... End 19 Reactive Form
