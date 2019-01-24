@@ -10,7 +10,7 @@ export class CounterComponent{
 increment()
 {
 this.number++;
-this.numberChange.emit(this.number);
+//this.numberChange.emit(this.number);
 }
 
 

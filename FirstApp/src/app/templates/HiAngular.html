@@ -1,10 +1,56 @@
-<div style="border: 1px solid red;padding: 20px">
-<ng-content select="h3"></ng-content>
+<!-- <input type="text" [(ngModel)]="myStyle" />
+<h2 [ngStyle]="{color : myStyle}" [ngClass]="['class1',dynamicClass]">Hi Angular</h2>
+
+<hr />
+<input type="button" (click)="active()" value="Click Me !" />
+
+<input type="number" [(ngModel)]="count" />
+<div *ngIf="count<1">
+    <h2 style="border: 1px solid red; padding:10px; ">Active Dive ...</h2>
 </div>
 
-<div style="border: 1px solid green;padding: 20px">
-  <ng-content select="h1"></ng-content>
-  </div>
-  <div style="border: 1px solid blue;padding: 20px">
-    <ng-content select="p"></ng-content>
-  </div>
+<hr />
+<ul>
+    <li *ngFor="let Person of People">
+        {{Person.name}} {{Person.family}}  {{Person.age}}
+
+    </li>
+</ul>
+
+<hr />
+<input type="number" [(ngModel)]="mySwitch"/>
+<div [ngSwitch]="mySwitch">
+    <div *ngSwitchCase="1">
+        <h2 style="color:red">
+            this is switch 1
+        </h2>
+    </div>
+
+    <div *ngSwitchCase="2">
+        <h2 style="color:green">
+            this is switch 2
+        </h2>
+    </div>
+
+    <div *ngSwitchCase="3">
+        <h2 style="color:yellow">
+            this is switch 3
+        </h2>   
+    </div>
+    <div *ngSwitchDefault>
+        this is default
+    </div>
+
+</div> -->
+<div></div>
+<div style="border: 1px solid; color:yellow">
+    <ng-Content select="h1"></ng-Content>
+</div>
+
+<div style="border: 1px solid; color:red">
+    <ng-Content select="h3"></ng-Content>
+</div>
+
+<div style="border: 1px solid; color:blue">
+    <ng-Content select="p"></ng-Content>
+</div>

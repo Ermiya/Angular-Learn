@@ -15,7 +15,7 @@ var AppComponent = (function () {
         this.builder = builder;
         this.username = new forms_1.FormControl('', [
             forms_1.Validators.required,
-            forms_1.Validators.minLength(5)
+            forms_1.Validators.minLength(4)
         ]);
         this.password = new forms_1.FormControl('', [
             forms_1.Validators.required
@@ -31,7 +31,7 @@ var AppComponent = (function () {
             address: this.address
         });
     }
-    AppComponent.prototype.save = function () {
+    AppComponent.prototype.save = function (_register) {
         console.log(this.registerForm.value);
     };
     return AppComponent;
@@ -39,7 +39,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        templateUrl: 'app/templates/appCoponent.html',
+        templateUrl: 'app/templates/appComponents.html',
     }),
     __metadata("design:paramtypes", [forms_1.FormBuilder])
 ], AppComponent);

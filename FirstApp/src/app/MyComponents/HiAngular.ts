@@ -1,29 +1,33 @@
 import { Component } from '@angular/core';
 
+
 @Component({
-  selector: 'hiangular',
-  templateUrl: '/app/templates/HiAngular.html',
-  styleUrls: ['app/Content/MyComponent.css']
+    selector: 'hiAngular',
+    // template :'<h1> This is my components</h1> ',
+    templateUrl: '/app/templates/HiAngular.html',
+    styleUrls: ['app/Content/MyComponent.css']
+
 })
-export class HiAngularComponent{
-  mystyle: string = 'black';
-  dynamicClass: string = 'danger';
-  count: number = 1;
-  isActive: boolean = false;
-  people: any[];
-  myswitch: number =0;
 
-constructor()
-{
-  this.people = [
-{name : 'Iman' , family : 'Madaeny', age : 30},
-{name : 'Ali' , family : 'Alizadeh', age : 40},
-{name : 'Sara' , family : 'Ahmadi', age : 18}
-  ];
-}
 
-  active()
-  {
-    this.isActive = !this.isActive;
-  }
-}
+export class hiAngularComponent {
+
+    myStyle: string = 'yellow';
+    dynamicClass: string = 'danger';
+    isActive: boolean = false;
+    count: number = 1;
+    People: any[];
+    mySwitch:number=2;
+    constructor() {
+        this.People = [
+            { name: 'ALi', family: 'Alavi', age: 20 },
+            { name: 'Reza', family: 'Alavi', age: 43 },
+            { name: 'hossein', family: 'hossein', age: 45 },
+            { name: 'Hasan', family: 'Alavi', age: 12 },
+            { name: 'Mohhamad', family: 'hossein', age: 34 }
+        ];
+    }
+    active() {
+        this.isActive = !this.isActive;
+    }
+};

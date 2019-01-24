@@ -1,43 +1,66 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Register } from './models/Register';
-import { Validators , FormGroup , FormControl , FormBuilder } from '@angular/forms';
-
+import { Validators, FormControl, FormGroup, FormBuilder } from '@angular/forms'
 @Component({
   selector: 'my-app',
-  templateUrl: 'app/templates/appCoponent.html',
+  templateUrl: 'app/templates/appComponents.html',
+  // styles: [`
+  //     .ng-valid[required],
+  //     ng-valid.required {
+  //       border: 1px solid green;
+  //     }
+  //     .ng-invalid:not(form)[class~='ng-touched'] {
+  //       border: 1px solid red;
+  //     }
+  //   `,
+  // ],
 })
-export class AppComponent  {
-register: Register;
+export class AppComponent {
+  //  name = 'Angular';
+  //  age=34;
+  //  colors:string[]=['red','yellow','green','blue'];
 
-username =  new FormControl('',[
-  Validators.required ,
-  Validators.minLength(5)
-]);
-password = new FormControl('',[
-  Validators.required
-]);
-email = new FormControl('',[
-  Validators.required
-]);
-address = new FormControl('');
+  //  number: number = 0;
 
+  //  myName:string="farshid";
+  //register: Register;
+  // save(_register: any) {
 
-registerForm : FormGroup = this.builder.group({
-username : this.username,
-password : this.password,
-email: this.email,
-address: this.address
-});
+  // //Driven form
+  // this.register = new Register(_register.value.username, _register.value.password, _register.value.email, _register.value.address);
+  // //
+  // console.log(this.register);
+  //}
 
+  register: Register;
 
-constructor(private builder: FormBuilder)
-{
+  username = new FormControl('',[
+    Validators.required,
+    Validators.minLength(4)
+  
+  ]);
+  password = new FormControl('',[
+    Validators.required
+  
+  ]);
+  email = new FormControl('',[
+    Validators.required
+  
+  ]);
+  address = new FormControl('');
 
-}
+  registerForm: FormGroup = this.builder.group({
+    username: this.username,
+    password: this.password,
+    email: this.email,
+    address: this.address
+  })
 
-save()
-{
-console.log(this.registerForm.value);
+  constructor(private builder: FormBuilder) {
 
-}
+  }
+  save(_register: any) {
+    console.log(this.registerForm.value);
+  }
+
 }

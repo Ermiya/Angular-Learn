@@ -9,31 +9,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var HiAngularComponent = (function () {
-    function HiAngularComponent() {
-        this.mystyle = 'black';
+var hiAngularComponent = (function () {
+    function hiAngularComponent() {
+        this.myStyle = 'yellow';
         this.dynamicClass = 'danger';
-        this.count = 1;
         this.isActive = false;
-        this.myswitch = 0;
-        this.people = [
-            { name: 'Iman', family: 'Madaeny', age: 30 },
-            { name: 'Ali', family: 'Alizadeh', age: 40 },
-            { name: 'Sara', family: 'Ahmadi', age: 18 }
+        this.count = 1;
+        this.mySwitch = 2;
+        this.People = [
+            { name: 'ALi', family: 'Alavi', age: 20 },
+            { name: 'Reza', family: 'Alavi', age: 43 },
+            { name: 'hossein', family: 'hossein', age: 45 },
+            { name: 'Hasan', family: 'Alavi', age: 12 },
+            { name: 'Mohhamad', family: 'hossein', age: 34 }
         ];
     }
-    HiAngularComponent.prototype.active = function () {
+    hiAngularComponent.prototype.active = function () {
         this.isActive = !this.isActive;
     };
-    return HiAngularComponent;
+    return hiAngularComponent;
 }());
-HiAngularComponent = __decorate([
+hiAngularComponent = __decorate([
     core_1.Component({
-        selector: 'hiangular',
+        selector: 'hiAngular',
+        // template :'<h1> This is my components</h1> ',
         templateUrl: '/app/templates/HiAngular.html',
         styleUrls: ['app/Content/MyComponent.css']
     }),
     __metadata("design:paramtypes", [])
-], HiAngularComponent);
-exports.HiAngularComponent = HiAngularComponent;
+], hiAngularComponent);
+exports.hiAngularComponent = hiAngularComponent;
+;
 //# sourceMappingURL=HiAngular.js.map

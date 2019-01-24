@@ -1,23 +1,27 @@
-import { Component , Input } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'myComponent',
+  // template :'<h1> This is my components</h1> ',
   templateUrl: '/app/templates/MyComponent.html',
   styleUrls: ['app/Content/MyComponent.css']
+
 })
+
 export class MyComponent {
   @Input() message: string;
-@Input() mycolors: string[];
+  @Input() mycolors: string[];
 
 
   name: string;
   family: string;
-  names: string[] = ['Iman Madaeny' , 'Ali mohammadi' , 'Sara Ahmadi' , 'Reza Alizadeh'];
+  names: string[] = ["ali", "farhad", "saeid"]
 
-  constructor()
-  {
-    this.name = 'Parham';
-    this.family = 'Madaeny';
-  }
+  constructor() {
+    this.name = 'ermiya';
+    this.family = 'saeidi'
+  };
+
+
+
 }

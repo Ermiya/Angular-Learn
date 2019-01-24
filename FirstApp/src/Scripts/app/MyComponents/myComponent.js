@@ -11,10 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var MyComponent = (function () {
     function MyComponent() {
-        this.names = ['Iman Madaeny', 'Ali mohammadi', 'Sara Ahmadi', 'Reza Alizadeh'];
-        this.name = 'Parham';
-        this.family = 'Madaeny';
+        this.names = ["ali", "farhad", "saeid"];
+        this.name = 'ermiya';
+        this.family = 'saeidi';
     }
+    ;
     return MyComponent;
 }());
 __decorate([
@@ -28,6 +29,7 @@ __decorate([
 MyComponent = __decorate([
     core_1.Component({
         selector: 'myComponent',
+        // template :'<h1> This is my components</h1> ',
         templateUrl: '/app/templates/MyComponent.html',
         styleUrls: ['app/Content/MyComponent.css']
     }),

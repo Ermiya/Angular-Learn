@@ -19,8 +19,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule],
-        declarations: [app_component_1.AppComponent, MyComponent_1.MyComponent, counter_1.CounterComponent, HiAngular_1.HiAngularComponent],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
+        declarations: [app_component_1.AppComponent, MyComponent_1.MyComponent, counter_1.CounterComponent, HiAngular_1.hiAngularComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
