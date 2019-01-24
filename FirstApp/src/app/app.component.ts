@@ -29,7 +29,11 @@ export class AppComponent {
 
     this.register = new Register(_register.value.username,_register.value.password,_register.value.email,_register.value.address);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+//
+>>>>>>> parent of 5faf6a3... End 19 Reactive Form
 =======
 //
 >>>>>>> parent of 5faf6a3... End 19 Reactive Form
