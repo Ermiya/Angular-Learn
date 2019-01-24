@@ -28,7 +28,11 @@ export class AppComponent {
   save(_register: any) {
 
     this.register = new Register(_register.value.username,_register.value.password,_register.value.email,_register.value.address);
+<<<<<<< HEAD
 
+=======
+//
+>>>>>>> parent of 5faf6a3... End 19 Reactive Form
     console.log(this.register);
   }
 }
