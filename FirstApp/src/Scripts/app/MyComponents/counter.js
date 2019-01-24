@@ -15,7 +15,7 @@ var CounterComponent = (function () {
     }
     CounterComponent.prototype.increment = function () {
         this.number++;
-        //this.numberChange.emit(this.number);
+        this.numberChange.emit(this.number);
     };
     return CounterComponent;
 }());
