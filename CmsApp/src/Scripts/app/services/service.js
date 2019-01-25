@@ -20,6 +20,7 @@ var MyService = (function () {
         this.GetPageCount = "PageCount";
         this.GetNewsById = "api/News/";
         this.GetNewsByGroupId = "Group/";
+        this.GetComment = "Comments/";
     }
     MyService.prototype.getAllGroups = function () {
         return this.http.get(this.BaseUrl + this.GetAllGroups).map(function (res) { return res.json(); });
@@ -28,13 +29,19 @@ var MyService = (function () {
         return this.http.get(this.BaseUrl + this.GetNewsByPageId + pageNumber).map(function (res) { return res.json(); });
     };
     MyService.prototype.getPageCount = function () {
-        return this.http.get(this.BaseUrl + this.getPageCount).map(function (res) { return res.json(); });
+        return this.http.get(this.BaseUrl + this.GetPageCount).map(function (res) { return res.json(); });
     };
     MyService.prototype.getNewsById = function (newsId) {
         return this.http.get(this.BaseUrl + this.GetNewsById + newsId).map(function (res) { return res.json(); });
     };
     MyService.prototype.getNewsByGroupId = function (groupId) {
-        return this.http.get(this.BaseUrl + this.getNewsByGroupId + groupId).map(function (res) { return res.json(); });
+        return this.http.get(this.BaseUrl + this.GetNewsByGroupId + groupId).map(function (res) { return res.json(); });
+    };
+    MyService.prototype.getAllCommments = function (newsId) {
+        return this.http.get(this.BaseUrl + this.GetComment + newsId).map(function (res) { return res.json(); });
+    };
+    MyService.prototype.postComment = function (comment) {
+        return this.http.post(this.BaseUrl + '/Api/News/', comment).map(function (res) { return res; });
     };
     return MyService;
 }());

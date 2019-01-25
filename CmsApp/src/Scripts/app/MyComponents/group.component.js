@@ -12,37 +12,28 @@ var core_1 = require("@angular/core");
 var service_1 = require("../services/service");
 var router_1 = require("@angular/router");
 require("rxjs/add/operator/switchMap");
-var NewsComponent = (function () {
-    function NewsComponent(api, route) {
+var GroupsComponent = (function () {
+    function GroupsComponent(api, route) {
         this.api = api;
         this.route = route;
-        this.pagenumber = 1;
-        this.pagging = [];
     }
-    NewsComponent.prototype.ngOnInit = function () {
+    GroupsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.map(function (param) { return param['id']; }).switchMap(function (id) {
-            if (id === void 0) { id = 1; }
-            _this.pagenumber = id;
-            return _this.api.getNews(_this.pagenumber);
+            return _this.api.getNewsByGroupId(id);
         }).subscribe(function (res) {
             _this.news = res;
         });
-        this.api.getPageCount().subscribe(function (res) {
-            for (var i = 1; i <= res; i++) {
-                _this.pagging.push(i);
-            }
-        });
     };
-    return NewsComponent;
+    return GroupsComponent;
 }());
-NewsComponent = __decorate([
+GroupsComponent = __decorate([
     core_1.Component({
-        selector: 'news',
-        templateUrl: 'app/templates/NewsComponent.html',
+        selector: 'groups',
+        templateUrl: 'app/templates/GroupsComponent.html',
         providers: [service_1.MyService]
     }),
     __metadata("design:paramtypes", [service_1.MyService, router_1.ActivatedRoute])
-], NewsComponent);
-exports.NewsComponent = NewsComponent;
-//# sourceMappingURL=news.component.js.map
+], GroupsComponent);
+exports.GroupsComponent = GroupsComponent;
+//# sourceMappingURL=group.component.js.map

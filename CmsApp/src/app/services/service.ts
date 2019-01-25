@@ -4,6 +4,8 @@ import { Observable } from 'rxjs/Observable';
 import { Group } from '../models/Group';
 import 'rxjs/add/operator/map';
 import { News } from '../models/news';
+import { NewsComponent } from '../MyComponents/news.component';
+import { NewComment } from '../models/newsComment';
 
 @Injectable()
 
@@ -14,6 +16,7 @@ export class MyService {
     GetNewsById: string;
     GetPageCount: string;
     GetNewsByGroupId: string;
+    GetComment: string;
 
     constructor(private http: Http) {
         this.BaseUrl = "http://localhost:3603/";
@@ -22,6 +25,7 @@ export class MyService {
         this.GetPageCount = "PageCount";
         this.GetNewsById = "api/News/";
         this.GetNewsByGroupId = "Group/";
+        this.GetComment = "Comments/";
     }
     getAllGroups(): Observable<Group[]> {
         return this.http.get(this.BaseUrl + this.GetAllGroups).map(res => res.json());
@@ -32,7 +36,7 @@ export class MyService {
     }
 
     getPageCount() {
-        return this.http.get(this.BaseUrl + this.getPageCount).map(res => res.json());
+        return this.http.get(this.BaseUrl + this.GetPageCount).map(res => res.json());
     }
 
     getNewsById(newsId: number): Observable<News> {
@@ -40,6 +44,16 @@ export class MyService {
     }
 
     getNewsByGroupId(groupId: number): Observable<News[]> {
-        return this.http.get(this.BaseUrl + this.getNewsByGroupId + groupId).map(res => res.json());
+        return this.http.get(this.BaseUrl + this.GetNewsByGroupId + groupId).map(res => res.json());
     }
+
+
+    getAllCommments(newsId: number): Observable<NewsComponent[]> {
+        return this.http.get(this.BaseUrl + this.GetComment + newsId).map(res => res.json());
+    }
+
+    postComment(comment: NewComment) {
+        return this.http.post(this.BaseUrl + '/Api/News/', comment).map(res => res);
+    }
+
 }

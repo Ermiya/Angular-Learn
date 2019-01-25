@@ -14,7 +14,7 @@
         <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}" ><a routerLink="/">Home</a></li>
         <li [routerLinkActive]="['active']"><a routerLink="/AboutUs">about</a></li>
         <li [routerLinkActive]="['active']"><a routerLink="/ContactUs">contact</a></li>
-        <li [routerLinkActive]="['active']"><a routerLink="/News">news</a></li>
+        <li [routerLinkActive]="['active']"><a routerLink="/News/Page/1">news</a></li>
         <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact : true}"><a routerLink="/">Home</a></li>
         <li [routerLinkActive]="['active']"><a routerLink="/AboutUs">About</a></li>
         <li [routerLinkActive]="['active']"><a routerLink="/ContactUs">Contact</a></li>
@@ -40,7 +40,7 @@
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
     <div class="list-group">
       <a href="#" class="list-group-item active">Groups</a>
-      <a href="#" class="list-group-item" *ngFor="let group of groups">{{group.GroupTitle}}</a>
+      <a href="#" class="list-group-item" *ngFor="let group of groups" [routerLink]="['/Group',group.GroupID]">{{group.GroupTitle}}</a>
 
     </div>
   </div><!--/.sidebar-offcanvas-->

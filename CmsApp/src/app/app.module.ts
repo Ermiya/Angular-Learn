@@ -1,34 +1,33 @@
-import { NgModule } from '@angular/core';
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Route } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpModule} from '@angular/http'
-import { AppComponent } from './app.component';
+
+
+import { AppComponent }  from './app.component';
 import { ContactUsComponent } from './MyComponents/contactus.component';
-import { homeComponent } from './MyComponents/home.component';
+import { HomeComponent } from './MyComponents/home.component';
 import { NewsComponent } from './MyComponents/news.component';
 import { AboutUsComponent } from './MyComponents/aboutus.component';
+import { GroupsComponent } from './MyComponents/group.component';
+import { SingleNewsComponent } from './MyComponents/singlenews.component';
 
 
-const routes: any = [
-  { path: '', component: homeComponent },
-  { path: 'home', component: homeComponent },
-  { path: 'News', component: NewsComponent },
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'AboutUs', component: AboutUsComponent },
   { path: 'ContactUs', component: ContactUsComponent },
-  { path: 'AboutUs', component: AboutUsComponent }
-
-]
+  { path: 'News/Page/:id', component: NewsComponent },
+  { path: 'Group/:id', component: GroupsComponent },
+  { path: 'News/:id', component: SingleNewsComponent },
+];
 
 
 @NgModule({
-  imports: [BrowserModule, ReactiveFormsModule, RouterModule.forRoot(routes),HttpModule],
-  declarations: [
-    AppComponent,
-    ContactUsComponent,
-    homeComponent,
-    NewsComponent,
-    AboutUsComponent
-  ],
-  bootstrap: [AppComponent],
+  imports:      [ BrowserModule , ReactiveFormsModule ,RouterModule.forRoot(routes) , HttpModule],
+  declarations: [ AppComponent , ContactUsComponent , HomeComponent , AboutUsComponent , NewsComponent , SingleNewsComponent , GroupsComponent ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

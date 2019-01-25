@@ -1,0 +1,40 @@
+<div class="blog-post">
+  <h2>{{news.Title}}</h2>
+  <blockquote>
+    {{news.ShrtDescription}}
+  </blockquote>
+  <p>
+    {{news.NewsText}}
+  </p>
+</div>
+
+
+
+<h2>Comments</h2>
+<hr />
+
+<form (ngSubmit)="save()" [formGroup]="CommentForm">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" name="Name" placeholder="Enter Name ..." [formControl]="Name" />
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" name="Email" placeholder="Enter Email ..." [formControl]="Email" />
+  </div>
+  <div class="form-group">
+    <label>Comment</label>
+    <textarea rows="10" class="form-control" name="Comment" placeholder="Enter Comment ..." [formControl]="Comment"></textarea>
+  </div>
+  <div class="form-group">
+    <input type="submit" class="btn btn-success" value="Save" [disabled]="!CommentForm.valid" />
+  </div>
+</form>
+
+
+<div class="thumbnail" *ngFor="let comment of comments">
+  <h2>{{comment.Name}}</h2>
+  <blockquote>
+    {{comment.Comment}}
+  </blockquote>
+</div>
