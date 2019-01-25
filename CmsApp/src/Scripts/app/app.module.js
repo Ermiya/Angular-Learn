@@ -9,6 +9,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var contactus_component_1 = require("./MyComponents/contactus.component");
 var home_component_1 = require("./MyComponents/home.component");
@@ -28,7 +29,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forRoot(routes)],
+        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, router_1.RouterModule.forRoot(routes), http_1.HttpModule],
         declarations: [
             app_component_1.AppComponent,
             contactus_component_1.ContactUsComponent,
