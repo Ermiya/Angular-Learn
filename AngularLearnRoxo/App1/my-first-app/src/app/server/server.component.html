@@ -1,1 +1,14 @@
-<p>برای استفاده از سرور کامپوننت ایجاد شده است</p>
+<button class="btn btn-primary" [disabled] = "!allowButton" (click)="ServerCreated()"> سرور جدید</button>
+<hr>
+<button class="btn btn-secondary"  (click)="ServerTextRefresh()">ریفرش سرور</button>
+<p>{{serverCreatedText}}</p>
+<hr>
+<p>سرور {{id}} در وضعیت {{status}} قرار دارد</p>
+<!-- <hr>
+<input type="text"  (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p> -->
+
+<hr>
+<input type="text"  [(ngModel)]="serverName">
+<p>{{serverName}}</p>
+
