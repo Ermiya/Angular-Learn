@@ -1,3 +1,4 @@
-<p>
-  servers works!
-</p>
+<p [ngStyle]="{backgroundColor: getColor()}" 
+   [ngClass]="{'online': this.status=='فعال'}"
+   >سرور {{id}} در وضعیت
+  {{status}} قرار دارد</p>

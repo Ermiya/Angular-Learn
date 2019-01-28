@@ -10,5 +10,13 @@
 
 <hr>
 <input type="text"  [(ngModel)]="serverName">
-<p>{{serverName}}</p>
+<!-- <p>{{serverName}}</p> -->
+<hr>
+<p *ngIf="serverCreatedStatus; else noserver">سرور جدید ایجاد شد نام سرور جدید {{serverName}} می باشد</p>
+<ng-template #noserver>
+    <p>سروری ایجاد نشده است</p>
+</ng-template>
+<app-servers></app-servers>
+<p *ngFor="let item of serverList">{{item}}</p>
+
 
