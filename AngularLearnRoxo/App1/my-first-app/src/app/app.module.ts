@@ -9,7 +9,7 @@ import { ServersComponent } from './servers/servers.component';
 
 @NgModule({
   declarations: [
-    AppComponent,ServerComponent, ServersComponent
+    AppComponent, ServerComponent, ServersComponent
   ],
   imports: [
     BrowserModule,

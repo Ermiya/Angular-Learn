@@ -16,7 +16,7 @@ export class ServerComponent {
     serverCreatedText: string = "هنوز سروری ایجاد نشده است";
     serverName: string;
     serverCreatedStatus: boolean = false;
-    serverList:string[];
+    serverList = [];
     constructor() {
         setTimeout(() => {
             this.allowButton = true;
@@ -26,9 +26,11 @@ export class ServerComponent {
         return this.status;
     }
     ServerCreated() {
+
         this.serverList.push(this.serverName);
+        console.log(this.serverList);
         this.serverCreatedText = "سرور" + this.serverName + "با موفقیت ایجاد شد!";
-        this.serverCreatedStatus=true;
+        this.serverCreatedStatus = true;
     }
     ServerTextRefresh() {
         this.serverCreatedText = " سروری ریفرش شد";

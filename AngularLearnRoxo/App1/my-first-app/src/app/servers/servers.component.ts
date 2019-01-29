@@ -11,10 +11,10 @@ export class ServersComponent implements OnInit {
   status: string = 'فعال';
 
   constructor() {
-    this.status=Math.random() >0.5 ? 'فعال' : 'غیر فعال';
+    this.status = Math.random() > 0.5 ? 'فعال' : 'غیر فعال';
    }
 
-   getColor(){
+   getColor() {
      return this.status === 'فعال' ? 'green' : 'red';
    }
   ngOnInit() {
