@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { NewServerComponent } from './new-server/new-server.component';
+import { ServerElementsComponent } from './server-elements/server-elements.component';
 
 @NgModule({
   declarations: [
-    AppComponent, ServerComponent, ServersComponent
+    AppComponent, ServerComponent, ServersComponent, NewServerComponent, ServerElementsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<div class="row ">
+    <h3 class="text-center">سامانه مدیریت سرور</h3>
+    <div class="col-xs-12 mt-12">
+        <p> یک سرور داخل ایران یا آلمان تعریف کنید</p>
+        <label>نام سرور</label>
+        <input type="text" class="form-control" [(ngModel)]="NewServerName">
+        <label>محتوای سرور</label>
+        <input type="text" class="form-control" [(ngModel)]="NewServerContent">
+        <br>
+        <button  class="btn btn-warning" (click)="onAddGermanyServer()">افزودن سرور آلمان</button>
+       
+        <button class="btn btn-primary" (click)="onAddIranianServer()">افزودن سرور ایران</button>
+    </div>
+</div>

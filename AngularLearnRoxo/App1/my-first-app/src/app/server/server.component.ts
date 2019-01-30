@@ -17,11 +17,8 @@ export class ServerComponent {
     serverName: string;
     serverCreatedStatus: boolean = false;
     serverList = [];
-    constructor() {
-        setTimeout(() => {
-            this.allowButton = true;
-        }, 3000);
-    }
+
+
     getStatus(): string {
         return this.status;
     }
@@ -37,7 +34,7 @@ export class ServerComponent {
     }
 
     onUpdateServerName(evevnt: any[]) {
-        this.serverName = event.target.value;
+        //this.serverName = event.target.value;
     }
 
 
