@@ -5,7 +5,7 @@
         <label>نام سرور</label>
         <input type="text" class="form-control" [(ngModel)]="NewServerName">
         <label>محتوای سرور</label>
-        <input type="text" class="form-control" [(ngModel)]="NewServerContent">
+        <input type="text" class="form-control" #serverContent [(ngModel)]="NewServerContent">
         <br>
         <button  class="btn btn-warning" (click)="onAddGermanyServer()">افزودن سرور آلمان</button>
        

@@ -3,5 +3,15 @@
     
         <hr>
     
-        <app-server-elements *ngFor="let serverElement of serverElements" [element]="serverElement"></app-server-elements>
+        <app-server-elements *ngFor="let serverElement of serverElements" [element]="serverElement">
+<!-- 
+                <div class="panel-heading">{{serverElement.name}}</div>
+                <div class="panel-body">
+                    <p>
+                        <strong *ngIf="serverElement.type==='iran'" style="color:red">{{serverElement.content}}</strong>
+                        <em *ngIf="serverElement.type==='germany'" >{{serverElement.content}}</em>
+                    </p>
+                </div> -->
+
+        </app-server-elements>
     </div>
