@@ -1,10 +1,15 @@
 <div class="container">
         <app-new-server  (iranianServer)="onLocalServer($event)" (germanyServer)="onExternalServer($event)"></app-new-server>
-    
+
         <hr>
-    
-        <app-server-elements *ngFor="let serverElement of serverElements" [element]="serverElement">
-<!-- 
+<button class="btn btn-primary" (click)="OnChangeFirst()">تغيير عنوان</button>
+<button class="btn btn-danger" (click)="OnDestroyServer()">حذف سرور </button>
+
+        <app-server-elements
+          *ngFor="let serverElement of serverElements"
+          [element]="serverElement"
+          [name]= "serverElement.name"  >
+<!--
                 <div class="panel-heading">{{serverElement.name}}</div>
                 <div class="panel-body">
                     <p>

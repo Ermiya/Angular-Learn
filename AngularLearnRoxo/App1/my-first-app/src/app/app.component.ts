@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   serverElements = [{ type: 'iran', name: 'سرور مرکزی', content: 'این سرور برای تست است' }];
+  title = 'فرشيد';
+  name = '';
 
   onLocalServer(localData) {
     this.serverElements.push({
@@ -22,7 +24,11 @@ export class AppComponent {
       content: externalData.contentServer
     });
   }
+  OnChangeFirst() {
+    this.serverElements[0].name = 'سرور مركزي مجموعه روكسو در ايران';
+  }
+  OnDestroyServer() {
+    this.serverElements.splice(0, 1);
+  }
 
-  title = 'فرشيد';
-  name = '';
 }
