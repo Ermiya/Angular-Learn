@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {}
   onSelect(value) {
     if (value === 'recipe') {
+      console.log(value);
       this.recipeLoaded.emit('recipe');
     } else {
       this.recipeLoaded.emit('shopping-list');
