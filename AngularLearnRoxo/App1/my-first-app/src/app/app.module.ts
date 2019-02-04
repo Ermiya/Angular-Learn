@@ -11,12 +11,13 @@ import { ServerElementsComponent } from './server-elements/server-elements.compo
 import { DemoDirectiveComponent } from './demo-directive/demo-directive.component';
 import { BasicHighlightDirective } from './shared/directives/basic-highlight.directive';
 import { BetterHighlightDirective } from './shared/directives/better-highlight.directive';
+import { UnlessDirective } from './shared/directives/unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent, ServerComponent, ServersComponent, NewServerComponent, 
     ServerElementsComponent, DemoDirectiveComponent, BasicHighlightDirective, 
-    BetterHighlightDirective
+    BetterHighlightDirective, UnlessDirective
   ],
   imports: [
     BrowserModule,
