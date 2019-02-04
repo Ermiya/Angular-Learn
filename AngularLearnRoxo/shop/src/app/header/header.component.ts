@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
       console.log(value);
       this.recipeLoaded.emit('recipe');
     } else {
+      console.log(value);
       this.recipeLoaded.emit('shopping-list');
     }
   }

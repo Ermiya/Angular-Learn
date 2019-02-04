@@ -7,16 +7,17 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'shop';
-  recipeShow: boolean= true;
+  recipeShow = true;
 
   constructor() {}
 
   onNavigation(event) {
-    console.log(event.value);
-    if (event.value == 'recipe') {
-      this.recipeShow = true
+    console.log(event);
+
+    if (event === 'recipe') {
+      this.recipeShow = true;
     } else {
-      this.recipeShow = false
+      this.recipeShow = false;
     }
   }
 }
