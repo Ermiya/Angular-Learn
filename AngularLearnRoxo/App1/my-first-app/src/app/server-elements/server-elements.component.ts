@@ -25,37 +25,37 @@ export class ServerElementsComponent implements OnInit, OnChanges, DoCheck , Aft
   @Input() element: {type: string; name: string; content: string};
   @Input() name;
   constructor() {
-    console.log('constructor Called');
+   // console.log('constructor Called');
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    console.log('ngOnChanges Called');
-    console.log(changes);
-  }
+  // ngOnChanges(changes: SimpleChanges) {
+  //   console.log('ngOnChanges Called');
+  //   console.log(changes);
+  // }
   ngOnInit() {
-    console.log('ngOnInit Called');
+    //console.log('ngOnInit Called');
   }
-  ngDoCheck() {
-    console.log('ngDoCheck Called');
-  }
-  ngAfterContentInit() {
-    console.log('ngAfterContentInit Called');
+  // ngDoCheck() {
+  //   console.log('ngDoCheck Called');
+  // }
+  // ngAfterContentInit() {
+  //   console.log('ngAfterContentInit Called');
 
-  }
-  ngAfterContentChecked() {
-    console.log('ngAfterContentChecked Called');
-  }
+  // }
+  // ngAfterContentChecked() {
+  //   console.log('ngAfterContentChecked Called');
+  // }
 
-  ngAfterViewChecked(): void {
-    console.log('ngAfterViewChecked Called');
-  }
+  // ngAfterViewChecked(): void {
+  //   console.log('ngAfterViewChecked Called');
+  // }
 
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit Called');
-  }
+  // ngAfterViewInit(): void {
+  //   console.log('ngAfterViewInit Called');
+  // }
 
-  ngOnDestroy(): void {
-    console.log('ngOnDestroy Called');
-  }
+  // ngOnDestroy(): void {
+  //   console.log('ngOnDestroy Called');
+  // }
 
 }
