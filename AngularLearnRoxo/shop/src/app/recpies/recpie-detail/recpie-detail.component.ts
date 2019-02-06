@@ -7,7 +7,7 @@ import { Recipe } from 'src/app/shared/models/recipe.model';
   styleUrls: ['./recpie-detail.component.css']
 })
 export class RecpieDetailComponent implements OnInit {
- @Input() recipe:Recipe;
+ @Input() recipe: Recipe;
   constructor() { }
 
   ngOnInit() {
