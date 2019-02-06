@@ -17,15 +17,18 @@ import {
   templateUrl: './server-elements.component.html',
   styleUrls: ['./server-elements.component.css'],
 })
-export class ServerElementsComponent implements OnInit, OnChanges, DoCheck , AfterContentInit ,
-            AfterContentChecked , AfterViewChecked , AfterViewInit , OnDestroy{
-
-
-
+export class ServerElementsComponent implements OnInit {
+    // OnChanges,
+    // DoCheck,
+    // AfterContentInit,
+    // AfterContentChecked,
+    // AfterViewChecked,
+    // AfterViewInit,
+    // OnDestroy
   @Input() element: {type: string; name: string; content: string};
   @Input() name;
   constructor() {
-   // console.log('constructor Called');
+    // console.log('constructor Called');
   }
 
   // ngOnChanges(changes: SimpleChanges) {
@@ -33,7 +36,7 @@ export class ServerElementsComponent implements OnInit, OnChanges, DoCheck , Aft
   //   console.log(changes);
   // }
   ngOnInit() {
-    //console.log('ngOnInit Called');
+    // console.log('ngOnInit Called');
   }
   // ngDoCheck() {
   //   console.log('ngDoCheck Called');
@@ -57,5 +60,4 @@ export class ServerElementsComponent implements OnInit, OnChanges, DoCheck , Aft
   // ngOnDestroy(): void {
   //   console.log('ngOnDestroy Called');
   // }
-
 }

@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <h5>{{ account.name }}</h5>
+    <hr />
+    <p>وضعيت اين حساب {{ account.status }}</p>
+    <button class="btn btn-default" (click)="onSetTo('فعال')">
+      تبديل به فعال
+    </button>
+    <button class="btn btn-default" (click)="onSetTo('غير فعال')">
+      تبديل به غير فعال
+    </button>
+    <button class="btn btn-default" (click)="onSetTo('نامشخص')">
+      تبديل به نامشخص
+    </button>
+  </div>
+</div>
