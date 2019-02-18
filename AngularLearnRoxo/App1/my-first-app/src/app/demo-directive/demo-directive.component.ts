@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoDirectiveComponent implements OnInit {
 
-  onlyOdd: boolean = false;
+  onlyOdd = false;
   oddNumbers = [1, 3, 5];
   evenNumbers = [2, 4];
-  value=10;
+  value = 10;
   constructor() { }
 
   ngOnInit() {
