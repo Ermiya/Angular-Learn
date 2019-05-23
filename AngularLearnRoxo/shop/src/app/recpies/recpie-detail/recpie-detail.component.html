@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-  
+
     <img class="img-responsive" src="{{recipe.imagePath}}" alt="{{recipe.name}}" />
   </div>
 </div>
@@ -17,9 +17,9 @@
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" >
-      <li><a href="#" class=""> افزودن مواد غذايي</a></li>
-      <li><a href="#" class="">ويرايش دستور غذايي</a></li>
-      <li><a href="#" class="">حذف دستور غذايي</a></li>
+      <li><a style="cursor: pointer" (click)="addToShoppingList()" class=""> افزودن مواد غذايي</a></li>
+      <li><a style="cursor: pointer" (click)="onEditRecipe()" class="">ويرايش دستور غذايي</a></li>
+      <li><a style="cursor: pointer" class="">حذف دستور غذايي</a></li>
     </ul>
   </div>
 </div>

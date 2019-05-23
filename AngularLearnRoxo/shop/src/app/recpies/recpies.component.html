@@ -3,11 +3,13 @@
 <app-recpie-list recip (recipeSelected)= "onRecipeSelected($event)"></app-recpie-list>
 </div>
 <div class="col-md-5">
-  
-<app-recpie-detail [recipe]="recipe" *ngIf="recipe;else noSelectedRecipe"></app-recpie-detail>
+
+<!-- <app-recpie-detail  [recipe]="recipe" *ngIf="recipe;else noSelectedRecipe"></app-recpie-detail>
 <ng-template #noSelectedRecipe >
 <p>لطفا یک دستور غذا انتخاب نمایید</p>
-</ng-template>
+</ng-template> -->
+<router-outlet></router-outlet>
+
 
 </div>
 </div>

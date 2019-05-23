@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Recipe } from '../../shared/models/recipe.model';
 import { RecipeService } from 'src/app/shared/services/recipe.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recpie-list',
@@ -9,7 +10,7 @@ import { RecipeService } from 'src/app/shared/services/recipe.service';
 })
 export class RecpieListComponent implements OnInit {
   @Output() recipeSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
-  recipes:Recipe[] ;
+  recipes: Recipe[] ;
     // recipes: Recipe[] = [
   //   new Recipe('1دستور پخت ماكاروني',
   //              '1توضيح براي دستور پخت ماكاروني قرار ميدهيم',
@@ -21,14 +22,22 @@ export class RecpieListComponent implements OnInit {
   //              '3توضيح براي دستور پخت ماكاروني قرار ميدهيم',
   //              'https://cdn.lifesambrosia.com/wp-content/uploads/spaghetti-with-creamy-marinara.jpg')
   // ];
-  constructor( private recipeService:RecipeService) {
+  constructor( private recipeService: RecipeService,
+              private router: Router,
+              private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-this.recipes= this.recipeService.getRecipe();
+  this.recipes = this.recipeService.getRecipe();
   }
+  onNewRecipe(){
+this.router.navigate(['new'],{relativeTo: this.route});
+  }
+
   onEntekhabRecipe(event) {
     this.recipeSelected.emit(event);
   }
+
+
 }
