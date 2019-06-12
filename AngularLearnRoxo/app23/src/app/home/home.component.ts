@@ -12,7 +12,11 @@ observableSubscription: Subscription;
   constructor() { }
 
   ngOnInit() {
-    const myNumber = interval(1000);
+    const myNumber = interval(1000).mapTo(
+      (data) => {
+        return data * 2
+      }
+    );
    this.numberSubscription = myNumber.subscribe(
       (number: Number) =>{
         console.log(number)
