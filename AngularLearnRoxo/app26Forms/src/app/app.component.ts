@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild, ElementRef} from '@angular/core';
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -35,19 +35,25 @@ export class AppComponent {
       userData: {
         username: suggestedName
       }
-    })
+    });
   }
-  // onSubmit(form: NgForm){
+  // onSubmit(form: NgForm) {
   //   console.log(form);
   // }
-  onSubmit(){
-    this.submitted = true
+
+  onSubmit() {
+    console.log(this.signupForm);
+  }
+
+  onSubmit2() {
+
+    this.submitted = true;
     this.user.username = this.signupForm.form.value.userData.username
     this.user.email = this.signupForm.form.value.userData.email
     this.user.secret = this.signupForm.form.value.secret
     this.user.questionAnswer = this.signupForm.form.value.questionAnswer
     this.user.gender = this.signupForm.form.value.gender
 
-    this.signupForm.reset()
+    this.signupForm.reset();
   }
 }
