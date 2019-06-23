@@ -10,6 +10,7 @@ export class AppComponent {
   @ViewChild('f') signupForm: NgForm;
   defualtQuestion = 'teacher';
   answer = '';
+
   genders = ['مرد', 'زن'];
   user = {
     username: '',
@@ -48,11 +49,11 @@ export class AppComponent {
   onSubmit2() {
 
     this.submitted = true;
-    this.user.username = this.signupForm.form.value.userData.username
-    this.user.email = this.signupForm.form.value.userData.email
-    this.user.secret = this.signupForm.form.value.secret
-    this.user.questionAnswer = this.signupForm.form.value.questionAnswer
-    this.user.gender = this.signupForm.form.value.gender
+    this.user.username = this.signupForm.form.value.userData.username;
+    this.user.email = this.signupForm.form.value.userData.email;
+    this.user.secret = this.signupForm.form.value.secret;
+    this.user.questionAnswer = this.signupForm.form.value.questionAnswer;
+    this.user.gender = this.signupForm.form.value.gender;
 
     this.signupForm.reset();
   }
