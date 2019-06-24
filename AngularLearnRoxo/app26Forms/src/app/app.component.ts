@@ -10,6 +10,7 @@ export class AppComponent {
   @ViewChild('f') signupForm: NgForm;
   defualtQuestion = 'teacher';
   answer = '';
+  num1 : number;
 
   genders = ['مرد', 'زن'];
   user = {
