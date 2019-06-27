@@ -1,31 +1,36 @@
 <div class="container" dir="rtl">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <form [formGroup]="signupForm">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+         <div formGroupName="userData">
           <div class="form-group">
-              <label for="username" >نام کاربری</label>
+            <label for="username" >نام کاربری</label>
+            <input
+              type="text"
+              id="username"
+              class="form-control"
+              formControlName="username"
+            >
+            <span class="help-block" *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched" >نام كاربري خود را وارد كنيد</span>
+          </div>
+          <div class="form-group">
+              <label for="email" >پست الکترونیک</label>
               <input
-                type="text"
-                id="username"
+                type="email"
+                id="email"
                 class="form-control"
-                formControlName="username"
-              >
+                formControlName="email"
+                >
+            <span class="help-block" *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched">ايميل  خود را وارد كنيد</span>
             </div>
-            <div class="form-group">
-                <label for="email" >پست الکترونیک</label>
-                <input
-                  type="email"
-                  id="email"
-                  class="form-control"
-                  formControlName="email"
-                  >
-              </div>
+         </div>
+
               <div class="radio" *ngFor="let gender of genders">
-          
+
                   <label >
                     <input type="radio"  [value]="gender" formControlName="gender">{{gender}}
                   </label>
-                  
+
                 </div>
                 <button class="btn btn-primary" type="submit" >ثبت </button>
       </form>
