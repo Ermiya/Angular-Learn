@@ -24,6 +24,13 @@
             <span class="help-block" *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched">ايميل  خود را وارد كنيد</span>
             </div>
          </div>
+         <div formArrayName="addresses">
+           <h3> آدرس ها </h3>
+           <button class="btn btn-default" type="button" (click)="onNewAddress()"> افزودن آدرس جديد</button>
+           <div class="form-group" *ngFor="let address of signupForm.get('addresses').controls; let i =index">
+             <input type="text" class="form-control" [formControlName]="i">
+           </div>
+         </div>
 
               <div class="radio" *ngFor="let gender of genders">
 
