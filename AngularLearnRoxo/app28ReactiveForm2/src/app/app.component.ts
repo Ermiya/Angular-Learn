@@ -27,8 +27,8 @@ onSubmit(){
 }
 
 onNewAddress(){
-  const control = new FormControl(null,Validators.required);
-  (<FormArray>this.signupForm.get('addresses')).push(control);
+  const control = new FormControl(null, Validators.required);
+  (<FormArray> this.signupForm.get('addresses')).push(control);
 
 }
 }
