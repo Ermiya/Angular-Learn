@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { RecpiesComponent } from './recpies/recpies.component';
 import { RecpieListComponent } from './recpies/recpie-list/recpie-list.component';
@@ -20,6 +21,7 @@ import { RecipeService } from './shared/services/recipe.service';
 @NgModule({
   declarations: [
     AppComponent,
+
     HeaderComponent,
     RecpiesComponent,
     RecpieListComponent,
@@ -29,11 +31,14 @@ import { RecipeService } from './shared/services/recipe.service';
     ShoppingEditComponent,
     DropdownDirective,
     RecipeEditComponent
+
   ],
   imports: [
     BrowserModule,
     RoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent]

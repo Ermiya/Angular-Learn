@@ -22,6 +22,9 @@ ingredientSubscription: Subscription;
       }
     );
   }
+  onEditIngredient(index){
+    this.shoppingListService.startedEditIngredientIndex.next(index);
+  }
 ngOnDestroy() {
   this.ingredientSubscription.unsubscribe();
 }
