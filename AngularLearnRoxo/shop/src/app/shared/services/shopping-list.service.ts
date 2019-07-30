@@ -13,11 +13,11 @@ export class ShoppingListService {
         new Ingredient('سس', 1)
     ];
 
-    getIngredien() {
+    getIngredient() {
         return this.ingredients.slice();
     }
 
-    getIngredient(index)
+    getIngredientIndex(index)
     {
       return this.ingredients[index];
     }
