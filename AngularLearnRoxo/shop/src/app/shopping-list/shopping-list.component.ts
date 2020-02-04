@@ -15,12 +15,17 @@ ingredientSubscription: Subscription;
   constructor(private shoppingListService: ShoppingListService) { }
 
   ngOnInit() {
-    this.ingredients = this.shoppingListService.getIngredien();
+    this.ingredients = this.shoppingListService.getIngredient();
+    console.log(this.ingredients);
     this.ingredientSubscription = this.shoppingListService.ingredientEvent.subscribe(
       (ingredients: Ingredient[]) => {
         this.ingredients = ingredients;
+
       }
     );
+  }
+  onEditIngredient(index) {
+    this.shoppingListService.startedEditIngredientIndex.next(index);
   }
 ngOnDestroy() {
   this.ingredientSubscription.unsubscribe();
