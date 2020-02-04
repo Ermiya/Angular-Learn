@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from './shared/users.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  implements OnInit{
-  title = 'app23';
-  user1Activated = false;
-  user2Activated = false;
-
+export class AppComponent {
+  appStatus = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+      resolve('stable')
+    },2000)
+  })
+  
   filterstring =''
   servers = [
     {
@@ -38,7 +39,6 @@ export class AppComponent  implements OnInit{
       started: new Date(15, 1, 2017)
     }
   ];
-
   getStatusClasses(server: {instanceType: string, name: string, status: string, started: Date}) {
     return {
       'list-group-item-success': server.status === 'آنلاین',
@@ -55,25 +55,5 @@ export class AppComponent  implements OnInit{
         started: new Date(15, 1, 2017)
       }
     )
-  }
-  
-
-  appStatus = new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-      resolve('stable')
-    },2000)
-  })
-
-  constructor(private userService: UserService){}
-  ngOnInit() {
-this.userService.userActivated.subscribe(
-  (id: number) => {
-    if ( id === 1) {
-      this.user1Activated = true;
-    } else if (id === 2) {
-      this.user2Activated = true;
-    }
-  }
-);
   }
 }

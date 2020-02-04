@@ -12,36 +12,36 @@ observableSubscription: Subscription;
   constructor() { }
 
   ngOnInit() {
-    const myNumber = interval(1000).mapTo(
-      (data) => {
-        return data * 2
-      }
-    );
-   this.numberSubscription = myNumber.subscribe(
-      (number: Number) =>{
-        console.log(number)
-      }
-    )
+    // const myNumber = interval(1000).mapTo(
+    //   (data) => {
+    //     return data * 2
+    //   }
+    //);
+  //  this.numberSubscription = myNumber.subscribe(
+  //     (number: Number) =>{
+  //       console.log(number)
+  //     }
+  //   )
 
-    const myObservable = Observable.create(
-      (observer: Observer<string>) =>{
-        setTimeout(() => {
-          observer.next('اولين پيام ارسال شود')
-        }, 2000 );
-        setTimeout(() => {
-          observer.complete()
-        }, 4000 );
-        setTimeout(() => {
-          observer.error('خطا : پيامي ارسال نشد')
-        }, 6000 );
-      }
-    );
+    // const myObservable = Observable.create(
+    //   (observer: Observer<string>) =>{
+    //     setTimeout(() => {
+    //       observer.next('اولين پيام ارسال شود')
+    //     }, 2000 );
+    //     setTimeout(() => {
+    //       observer.complete()
+    //     }, 4000 );
+    //     setTimeout(() => {
+    //       observer.error('خطا : پيامي ارسال نشد')
+    //     }, 6000 );
+    //   }
+    // );
 
-   this.observableSubscription = myObservable.subscribe(
-      (data: string) => {console.log(data)},
-      (error) => {console.log(error) },
-      () => {console.log('عمليات با موفقيت انجام شد')}
-    );
+  //  this.observableSubscription = myObservable.subscribe(
+  //     (data: string) => {console.log(data)},
+  //     (error) => {console.log(error) },
+  //     () => {console.log('عمليات با موفقيت انجام شد')}
+  //   );
   }
 ngOnDestroy() {
   this.numberSubscription.unsubscribe();
